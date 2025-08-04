@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Tracked Deals</h2>
+<table>
+    <tr><th>Product</th><th>Price</th><th>Link</th></tr>
+    {% for deal in deals %}
+    <tr>
+        <td>{{ deal.title }}</td>
+        <td>₹ {{ deal.price }}</td>
+        <td><a href="{{ deal.url }}" target="_blank">View</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
